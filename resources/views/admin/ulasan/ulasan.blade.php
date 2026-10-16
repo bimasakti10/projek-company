@@ -23,10 +23,10 @@
                 <!-- Header Tabel Biru -->
                 <thead style="background-color: #0d77e2;">
                     <tr>
-                        <th scope="col" class="text-black fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Nama Lengkap</th>
-                        <th scope="col" class="text-black fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Email</th>
-                        <th scope="col" class="text-black fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Isi Tanggapan</th>
-                        <th scope="col" class="text-black fw-semibold py-3 px-4 border-0 text-center text-uppercase" style="font-size: 0.85rem; width: 100px;">Aksi</th>
+                        <th scope="col" class="text-white fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Nama Lengkap</th>
+                        <th scope="col" class="text-white fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Email</th>
+                        <th scope="col" class="text-white fw-semibold py-3 px-4 border-0 text-uppercase" style="font-size: 0.85rem;">Isi Tanggapan</th>
+                        <th scope="col" class="text-white fw-semibold py-3 px-4 border-0 text-center text-uppercase" style="font-size: 0.85rem; width: 100px;">Aksi</th>
                     </tr>
                 </thead>
 
@@ -45,12 +45,15 @@
                             </div>
                         </td>
                         <td class="px-4 py-3 border-bottom text-muted">{{ $ulasan->email }}</td>
-                        <td class="px-4 py-3 border-bottom text-muted" style="max-width: 300px;">
-                            <!-- title attr buat nampilin teks full pas dihover -->
-                            <span class="d-inline-block text-truncate" style="max-width: 100%;" title="{{ $ulasan->pesan }}">
+                        
+                        <!-- PERUBAHAN ADA DI SINI -->
+                        <!-- max-width diatur biar nggak terlalu lebar, white-space: normal biar teks turun -->
+                        <td class="px-4 py-3 border-bottom text-muted" style="max-width: 400px; white-space: normal; word-wrap: break-word;">
+                            <span class="d-inline-block">
                                 "{{ $ulasan->pesan }}"
                             </span>
                         </td>
+                        
                         <td class="px-4 py-3 border-bottom text-center">
                             <!-- Form Delete Terhubung ke Database -->
                             <form action="{{ route('admin.ulasan.destroy', $ulasan->id) }}" method="POST" onsubmit="return confirm('Yakin mau hapus tanggapan dari {{ $ulasan->nama }}?');">
