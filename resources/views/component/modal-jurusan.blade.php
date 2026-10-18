@@ -21,11 +21,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block position-relative">
-                        <!-- Ganti gambar dengan ilustrasi server/jaringan -->
-                        <div class="text-center pt-3">
-                            <ion-icon name="server-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
-                        </div>
+                    <!-- PERUBAHAN: d-lg-flex, align-items-center, justify-content-center -->
+                    <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center position-relative">
+                        <ion-icon name="server-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -56,11 +54,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block position-relative">
-                        <!-- Ganti gambar dengan ilustrasi koding/web -->
-                        <div class="text-center pt-3">
-                            <ion-icon name="code-slash-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
-                        </div>
+                    <!-- PERUBAHAN: d-lg-flex, align-items-center, justify-content-center -->
+                    <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center position-relative">
+                        <ion-icon name="code-slash-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -90,10 +86,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block position-relative">
-                         <div class="text-center pt-3">
-                            <ion-icon name="bulb-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
-                        </div>
+                    <!-- PERUBAHAN: d-lg-flex, align-items-center, justify-content-center -->
+                    <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center position-relative">
+                        <ion-icon name="bulb-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
                     </div>
                 </div>
             </div>
@@ -123,10 +118,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 d-none d-lg-block position-relative">
-                        <div class="text-center pt-3">
-                            <ion-icon name="construct-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
-                        </div>
+                    <!-- PERUBAHAN: d-lg-flex, align-items-center, justify-content-center -->
+                    <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center position-relative">
+                        <ion-icon name="construct-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
                     </div>
                 </div>
             </div>

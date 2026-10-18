@@ -10,7 +10,7 @@
         <!-- Breadcrumbs untuk Tentang Kami -->
         @if(request()->routeIs('tentang'))
         <span class="text-secondary small ms-2 d-none d-md-inline">
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <span class="text-primary fw-medium">Tentang Kami</span>
         </span>
@@ -20,11 +20,11 @@
         @if(request()->routeIs('produk') || request()->routeIs('produk.detail'))
         <span class="text-secondary small ms-2 d-none d-md-inline">
             @if(request()->routeIs('produk'))
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <span class="text-primary fw-medium">layanan</span>
             @else
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <a href="{{ route('produk') }}" class="text-decoration-none text-dark">Layanan</a>
             <span class="mx-1">&gt;</span>
@@ -37,11 +37,11 @@
         @if(request()->routeIs('berita') || request()->routeIs('berita.detail'))
         <span class="text-secondary small ms-2 d-none d-md-inline">
             @if(request()->routeIs('berita'))
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <span class="text-primary fw-medium">Artikel</span>
             @else
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <a href="{{ route('berita') }}" class="text-decoration-none text-dark">Artikel</a>
             <span class="mx-1">&gt;</span>
@@ -54,11 +54,11 @@
         @if(request()->routeIs('galeri') || request()->routeIs('galeri.detail'))
         <span class="text-secondary small ms-2 d-none d-md-inline">
             @if(request()->routeIs('galeri'))
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <span class="text-primary fw-medium">Galeri</span>
             @else
-            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Halaman Utama</a>
+            <a href="{{ route('home') }}" class="text-decoration-none text-dark fw-bold">Beranda</a>
             <span class="mx-1">&gt;</span>
             <!-- Perbaikan link dan teks yang sebelumnya salah cetak "Berita" -->
             <a href="{{ route('galeri') }}" class="text-decoration-none text-dark">Galeri</a>
@@ -77,7 +77,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto text-center gap-lg-3 my-2 my-lg-0" id="navbar-example2">
                 <li class="nav-item">
-                    <a class="nav-link custom-nav-link fw-medium" href="#beranda">Halaman Utama</a>
+                    <a class="nav-link custom-nav-link fw-medium" href="#beranda">Beranda</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link custom-nav-link fw-medium" href="#tentang">Profil</a>
