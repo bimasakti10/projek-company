@@ -6,6 +6,7 @@ use App\Models\Berita;
 use App\Models\Galeri;
 use App\Models\Produk;
 use App\Models\Ulasan;
+use App\Models\Profil;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,8 +17,9 @@ class HomeController extends Controller
         $beritaTerbaru = Berita::latest()->take(6)->get();
         $galeris = Galeri::latest()->get();
         $produks = Produk::latest()->take(3)->get();
+        $profil = Profil::first();
 
-        return view('home.index', compact('beritaUtama', 'beritaTerbaru', 'galeris', 'produks'));
+        return view('home.index', compact('beritaUtama', 'beritaTerbaru', 'galeris', 'produks', 'profil'));
     }
 
     public function galeri()
@@ -35,6 +37,12 @@ class HomeController extends Controller
     {
         $berita = Berita::findOrFail($id);
         return view('home.detail', compact('berita'));
+    }
+
+    public function tentang()
+    {
+        $profil = Profil::first();
+        return view('home.tentang', compact('profil'));
     }
 
 public function produk()

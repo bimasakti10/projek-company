@@ -9,12 +9,14 @@ use App\Http\Controllers\Admin\GaleriAdminController;
 use App\Http\Controllers\Admin\UlasanController;
 use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\AkunController;
+use App\Http\Controllers\Admin\ProfilAdminController;
+
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/berita', [HomeController::class, 'berita'])->name('berita');
 Route::get('/berita/{id}', [HomeController::class, 'detail'])->name('berita.detail');
-Route::get('/tentang', function () {return view('home.tentang');})->name('tentang');
+Route::get('/tentang', [HomeController::class, 'tentang'])->name('tentang');    
 
 Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
 
@@ -49,19 +51,20 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/produk/{id}/edit', [ProdukAdminController::class, 'edit'])->name('produk.edit');
     Route::put('/produk/{id}', [ProdukAdminController::class, 'update'])->name('produk.update');
     Route::delete('/produk/{id}', [ProdukAdminController::class, 'destroy'])->name('produk.destroy');
+
+    Route::get('/akun', [App\Http\Controllers\Admin\AkunController::class, 'index'])->name('akun.akun');
+    Route::get('/akun/password', [App\Http\Controllers\Admin\AkunController::class, 'editPassword'])->name('akun.password.edit');
+    Route::post('/akun/password', [App\Http\Controllers\Admin\AkunController::class, 'updatePassword'])->name('akun.password.update');
+
+    Route::get('/ulasan', [UlasanController::class, 'index'])->name('ulasan.index');
+    Route::delete('/ulasan/{id}', [UlasanController::class, 'destroy'])->name('ulasan.destroy');
+
+    Route::get('/profil', [ProfilAdminController::class, 'edit'])->name('profil.index');
+    Route::put('/profil', [ProfilAdminController::class, 'update'])->name('profil.update');
 });
  
 Route::post('/tanggapan/kirim', [UlasanController::class, 'store'])->name('ulasan.store');
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/ulasan', [UlasanController::class, 'index'])->name('ulasan.index');
-    Route::delete('/ulasan/{id}', [UlasanController::class, 'destroy'])->name('ulasan.destroy');
-});
 
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-
-    Route::get('/akun', [App\Http\Controllers\Admin\AkunController::class, 'index'])->name('akun.akun');
-    Route::get('/akun/password', [App\Http\Controllers\Admin\AkunController::class, 'editPassword'])->name('akun.password.edit');
-    Route::post('/akun/password', [App\Http\Controllers\Admin\AkunController::class, 'updatePassword'])->name('akun.password.update');
-    
 });

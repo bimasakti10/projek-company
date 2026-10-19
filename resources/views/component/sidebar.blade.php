@@ -13,9 +13,15 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('admin.profil.index') }}"
+                class="nav-link text-white {{ request()->routeIs('admin.profil.*') ? 'active bg-white bg-opacity-25 text-primary fw-bold' : '' }} rounded-3 px-3 py-2">
+                Profil
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('admin.produk.produk') }}"
                 class="nav-link text-white {{ request()->routeIs('admin.produk.*') ? 'active bg-white bg-opacity-25 text-primary fw-bold' : '' }} rounded-3 px-3 py-2">
-                Produk/Layanan
+                Layanan
             </a>
         </li>
         <li class="nav-item">

@@ -10,7 +10,7 @@
     <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
     <div class="hero-content container position-relative z-2">
         <p class="hero-subtitle fs-5 fw-light mb-2">Selamat Datang di Website Resmi</p>
-        <h1 class="hero-title display-4 fw-bold mb-3">PT Solusi Koneksi Anda</h1>
+        <h1 class="hero-title display-4 fw-bold mb-3">PT Solusi Koneksi</h1>
         <p class="hero-description mx-auto mb-4 opacity-90" style="max-width: 650px;">
             Mitra teknologi terpercaya Anda dalam pengembangan perangkat lunak, aplikasi dinamis, dan solusi
             infrastruktur IT profesional.
@@ -28,7 +28,7 @@
                 <div class="d-flex align-items-center justify-content-center gap-3">
                     <ion-icon name="briefcase" class="fs-1"></ion-icon>
                     <div class="text-start">
-                        <h3 class="fw-bold mb-0 fs-4">100+</h3>
+                        <h3 class="fw-bold mb-0 fs-4">200+</h3>
                         <p class="mb-0 small opacity-75">Klien B2B</p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="d-flex align-items-center justify-content-center gap-3">
                     <ion-icon name="code-working" class="fs-1"></ion-icon>
                     <div class="text-start">
-                        <h3 class="fw-bold mb-0 fs-4">150+</h3>
+                        <h3 class="fw-bold mb-0 fs-4">500+</h3>
                         <p class="mb-0 small opacity-75">Proyek Selesai</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
         <div class="col-12 col-md-6">
             <div class="about-text">
                 <p class="text-secondary lh-lg mb-3 text-dark">
-                    PT Solusi Koneksi Anda adalah perusahaan teknologi informasi yang berkomitmen untuk memberikan layanan
+                    PT Solusi Koneksi adalah perusahaan teknologi informasi yang berkomitmen untuk memberikan layanan
                     pengembangan perangkat lunak yang inovatif dan terstruktur. Kami merancang website dinamis, aplikasi
                     mobile, dan sistem informasi manajemen berbasis <i>best practice</i> industri.
                 </p>
@@ -223,7 +223,7 @@
     <h2 class="fw-bold text-dark mb-2">Artikel & Informasi Terkini</h2>
     <p class="text-secondary mb-4 mx-auto" style="max-width: 600px;">
         Berita terbaru seputar tren teknologi, pembaruan layanan, wawasan industri, dan aktivitas dari PT Solusi
-        Koneksi Anda.
+        Koneksi.
     </p>
 
     @if($beritaTerbaru->count() > 0)
@@ -286,7 +286,7 @@
         <h2 class="fw-bold text-dark mb-2" style="font-size: 2rem;">Galeri Kegiatan</h2>
         <p class="text-secondary mb-5 fs-6" style="max-width: 650px; margin: 0 auto;">
             Dokumentasi implementasi proyek, lingkungan kerja, dan berbagai aktivitas tim profesional di PT Solusi
-            Koneksi Anda.
+            Koneksi.
         </p>
 
         <!-- Grid Galeri -->

@@ -1,9 +1,9 @@
-@extends('layouts.admin') <!-- Sesuaikan layout admin lu -->
+@extends('layouts.admin') 
 
 @section('content')
 <div class="container-fluid px-4 py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3 class="fw-bold text-dark mb-0">Kelola Produk/Layanan</h3>
+        <h3 class="fw-bold text-dark mb-0">Kelola Layanan</h3>
         <a href="{{ route('admin.produk.create') }}" class="btn btn-primary rounded-pill px-4">Tambah +</a>
     </div>
 

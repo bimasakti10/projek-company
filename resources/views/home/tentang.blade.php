@@ -7,7 +7,7 @@
 <!-- A. HEADER TENTANG KAMI -->
 <section class="bg-primary text-white py-5 text-center position-relative">
     <div class="container py-4 position-relative z-2">
-        <h1 class="display-5 fw-bold mb-3">Tentang PT Solusi Koneksi Anda</h1>
+        <h1 class="display-5 fw-bold mb-3">Tentang PT Solusi Koneksi</h1>
         <p class="lead mx-auto opacity-90" style="max-width: 700px;">
             Dedikasi kami adalah menghadirkan inovasi teknologi yang menjembatani kebutuhan bisnis Anda dengan solusi digital masa depan.
         </p>
@@ -28,12 +28,8 @@
                 </span>
                 <h2 class="fw-bold text-dark mb-4">Mitra Transformasi Digital Terpercaya</h2>
                 <div class="text-secondary lh-lg" style="text-align: justify;">
-                    <p>
-                        Berlokasi di Jl. Raya Pajajaran No. 88 F, Kota Bogor, PT Solusi Koneksi hadir sebagai jawaban atas tantangan era digitalisasi industri[cite: 1]. Kami adalah perusahaan IT *Consulting & Development* yang berfokus pada efisiensi operasional bisnis melalui penerapan teknologi mutakhir.
-                    </p>
-                    <p>
-                        Tim kami terdiri dari para ahli di bidang rekayasa perangkat lunak, arsitektur jaringan, dan desain pengalaman pengguna (UI/UX). Kami percaya bahwa teknologi yang dirancang dengan *best practice* akan memberikan keunggulan kompetitif jangka panjang bagi setiap klien kami.
-                    </p>
+                    <!-- Bagian ini sudah dibuat Dinamis (nl2br buat baca spasi ENTER) -->
+                    {!! nl2br(e($profil->deskripsi ?? 'Deskripsi perusahaan belum diatur.')) !!}
                 </div>
             </div>
 
@@ -49,8 +45,9 @@
                                 </div>
                                 <h4 class="fw-bold mb-0">Visi Kami</h4>
                             </div>
+                            <!-- Visi Dinamis -->
                             <p class="text-secondary mb-0">
-                                Menjadi perusahaan teknologi informasi terdepan di Indonesia yang memberikan ekosistem digital inovatif, aman, dan berkelanjutan untuk bisnis skala menengah hingga korporat.
+                                {{ $profil->visi ?? 'Visi perusahaan belum diatur.' }}
                             </p>
                         </div>
                     </div>
@@ -63,10 +60,17 @@
                                 </div>
                                 <h4 class="fw-bold mb-0">Misi Kami</h4>
                             </div>
+                            <!-- Misi Dinamis (Otomatis jadi list titik-titik setiap di-ENTER oleh Admin) -->
                             <ul class="text-secondary mb-0 ps-3 lh-lg">
-                                <li>Menyediakan layanan pengembangan *software* yang presisi dan tepat guna.</li>
-                                <li>Membangun infrastruktur jaringan yang tangguh dengan standar keamanan tinggi.</li>
-                                <li>Memberikan layanan purna jual dan dukungan pemeliharaan 24/7.</li>
+                                @if(isset($profil) && $profil->misi)
+                                    @foreach(explode("\n", str_replace("\r", "", $profil->misi)) as $poinMisi)
+                                        @if(trim($poinMisi) != '')
+                                            <li>{{ trim($poinMisi) }}</li>
+                                        @endif
+                                    @endforeach
+                                @else
+                                    <li>Misi perusahaan belum diatur.</li>
+                                @endif
                             </ul>
                         </div>
                     </div>
@@ -97,7 +101,7 @@
                     </div>
                     <h5 class="fw-bold mb-3 text-dark">Pengembangan Software</h5>
                     <p class="text-secondary small lh-base mb-0">
-                        Pembuatan aplikasi berbasis website, desktop, dan mobile (iOS/Android) menggunakan *framework* terkini seperti Laravel dan Flutter.
+                        Pembuatan aplikasi berbasis website, desktop, dan mobile (iOS/Android) menggunakan kerangka kerja terkini seperti Laravel dan Flutter.
                     </p>
                 </div>
             </div>
@@ -110,7 +114,7 @@
                     </div>
                     <h5 class="fw-bold mb-3 text-dark">Infrastruktur & Keamanan</h5>
                     <p class="text-secondary small lh-base mb-0">
-                        Konfigurasi server (Linux/Windows), instalasi jaringan *fiber optic*, *setup* Mikrotik/Cisco, serta audit *cyber security*.
+                        Konfigurasi server (Linux/Windows), instalasi jaringan <i>fiber optic</i>, <i>setup</i> Mikrotik/Cisco, serta audit <i>cyber security</i>.
                     </p>
                 </div>
             </div>
@@ -123,7 +127,7 @@
                     </div>
                     <h5 class="fw-bold mb-3 text-dark">Konsultasi IT Bisnis</h5>
                     <p class="text-secondary small lh-base mb-0">
-                        Perancangan *blueprint* transformasi digital dan evaluasi sistem yang sudah ada untuk menekan biaya operasional perusahaan.
+                        Perancangan peta jalan transformasi digital dan evaluasi sistem yang sudah ada untuk menekan biaya operasional perusahaan.
                     </p>
                 </div>
             </div>
@@ -136,7 +140,7 @@
                     </div>
                     <h5 class="fw-bold mb-3 text-dark">Maintenance & Support</h5>
                     <p class="text-secondary small lh-base mb-0">
-                        Pemeliharaan sistem berkala, *backup* data rutin, serta dukungan teknis profesional untuk menjamin *zero downtime*.
+                        Pemeliharaan sistem berkala, <i>backup</i> data rutin, serta dukungan teknis profesional untuk menjamin waktu operasional maksimal.
                     </p>
                 </div>
             </div>

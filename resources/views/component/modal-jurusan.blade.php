@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- PERUBAHAN: d-lg-flex, align-items-center, justify-content-center -->
+                    
                     <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-center position-relative">
                         <ion-icon name="server-outline" style="font-size: 8rem; color: #0d77e2;"></ion-icon>
                     </div>
